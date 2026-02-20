@@ -1,0 +1,12 @@
+#include<algorithm>
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        for(int i: nums)
+        {
+            if(count(nums.begin(),nums.end(),i)>(nums.size()/2))
+            return i;
+        }
+        return 0;
+    }
+};
